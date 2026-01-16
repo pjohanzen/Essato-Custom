@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNKCBSMZZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TNKCBSMZZT');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Essato Custom Clothing | Custom Suits in Davis County | Serving Layton, Bountiful, Farmington, Kaysville</title>
@@ -93,10 +102,10 @@
                 
                 <div class="contact-form">
                     <div class="luxury-card" style="height: 100%;">
-                        <h3>Schedule a Consultation</h3>
-                        <p style="margin-bottom: 2rem;">Complete the form below and we will contact you to arrange your personal consultation.</p>
+                        <h3 id="formHeading">Schedule a Consultation</h3>
+                        <p id="formDescription" style="margin-bottom: 2rem;">Complete the form below and we will contact you to arrange your personal consultation.</p>
                         
-                        <form id="contactForm" action="https://script.google.com/macros/s/AKfycbwGftLVuF2bKzScA7gpoH0KgjvvpjMfBV6L2qN6xcC7dx3FVHqaWWXmwVWD0ktPly4/exec" method="POST" onsubmit="return submitForm(this);">
+                        <form id="contactForm" method="POST">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" required>
@@ -112,27 +121,45 @@
                                 <input type="tel" id="phone" name="phone">
                             </div>
                             
-                            <!-- Hidden fields for date and time -->
-                            <input type="hidden" id="submission_date" name="submission_date">
-                            <input type="hidden" id="submission_time" name="submission_time">
+                            <div class="form-group">
+                                <label for="referral_source">Where did you hear about us?</label>
+                                <select id="referral_source" name="source" onchange="toggleOtherField()">
+                                    <option value="" disabled selected>Please select an option</option>
+                                    <option value="Google">Google Search</option>
+                                    <option value="Social Media">Social Media</option>
+                                    <option value="Friend">Friend or Family</option>
+                                    <option value="Yelp">Yelp</option>
+                                    <option value="Event">Event or Trade Show</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
                             
-                            <div id="formStatus" style="margin-bottom: 15px; display: none;">
-                                <div id="successMessage" style="color: #1a2b4a; background-color: #f8f9fa; border: 2px solid #d4af37; border-radius: 8px; padding: 30px; text-align: center; display: none; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin: 20px 0;">
-                                    <i class="fas fa-check-circle" style="color: #d4af37; font-size: 4rem; margin-bottom: 20px; display: block;"></i>
-                                    <h3 style="margin-bottom: 15px; color: #1a2b4a; font-size: 1.8rem; font-weight: 600;">Thank You!</h3>
-                                    <p style="font-size: 1.1rem; margin-bottom: 10px;">Your contact information has been successfully submitted.</p>
-                                    <p style="font-size: 1.1rem; margin-bottom: 20px;">We'll be in touch with you shortly.</p>
-                                    <div style="width: 60px; height: 4px; background-color: #d4af37; margin: 0 auto;"></div>
-                            </div>
-                                <div id="errorMessage" style="color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 20px; text-align: center; display: none;">
-                                    <i class="fas fa-exclamation-circle" style="color: #721c24; font-size: 3rem; margin-bottom: 15px;"></i>
-                                    <h4 style="margin-bottom: 10px; color: #721c24;">Submission Error</h4>
-                                    <p>There was an error submitting the form. Please try again or contact us directly.</p>
-                                    <p><a href="tel:8017544336" style="color: #721c24; font-weight: bold;">(801) 754 4336</a> or <a href="mailto:brandon@esattocustom.com" style="color: #721c24; font-weight: bold;">brandon@esattocustom.com</a></p>
-                            </div>
+                            <div class="form-group" id="other_referral_group" style="display: none;">
+                                <label for="other_referral">Please specify:</label>
+                                <input type="text" id="other_referral" name="otherSourceText" placeholder="Please tell us how you heard about us">
                             </div>
                             
                             <button type="submit" class="btn btn-gold" style="width: 100%;" id="submitButton">Submit</button>
+                        </form>
+                        
+                        <!-- Add this right after your form -->
+                        <div id="formStatus" style="margin-bottom: 15px; display: none;">
+                            <div id="successMessage" style="color: #1a2b4a; background-color: #f8f9fa; border: 2px solid #d4af37; border-radius: 8px; padding: 30px; text-align: center; display: none; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin: 20px 0;">
+                                <i class="fas fa-check-circle" style="color: #d4af37; font-size: 4rem; margin-bottom: 20px; display: block;"></i>
+                                <h3 style="margin-bottom: 15px; color: #1a2b4a; font-size: 1.8rem; font-weight: 600;">Thanks for contacting Essato!</h3>
+                                <p style="font-size: 1.1rem; margin-bottom: 10px;">I'll be in touch shortly.</p>
+                                <p style="font-size: 1.1rem; margin-bottom: 0;">Feel free to text <strong>(801) 754-4336</strong></p>
+                                <p style="font-size: 1.1rem; margin-bottom: 0;">&mdash; Brandon</p>
+                                <div style="width: 60px; height: 4px; background-color: #d4af37; margin: 20px auto 0;"></div>
+                            </div>
+                            <div id="errorMessage" style="color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 20px; text-align: center; display: none;">
+                                <i class="fas fa-exclamation-circle" style="color: #721c24; font-size: 3rem; margin-bottom: 15px;"></i>
+                                <h4 style="margin-bottom: 10px; color: #721c24;">Submission Error</h4>
+                                <p>There was an error submitting the form. Please try again or contact us directly.</p>
+                                <p><a href="tel:8017544336" style="color: #721c24; font-weight: bold;">(801) 754 4336</a> or <a href="mailto:brandon@esattocustom.com" style="color: #721c24; font-weight: bold;">brandon@esattocustom.com</a></p>
+                            </div>
+                        </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -575,6 +602,39 @@
                 font-size: 16px !important; /* Prevents iOS zoom on focus */
             }
             
+            /* Style for the referral source dropdown */
+            #referral_source {
+                width: 100%;
+                padding: 12px !important;
+                font-size: 16px !important;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: white;
+                transition: border-color 0.3s ease;
+            }
+            
+            /* Style for the other referral field */
+            #other_referral_group {
+                transition: all 0.3s ease;
+                margin-top: -10px;
+            }
+            
+            #other_referral {
+                width: 100%;
+                padding: 12px !important;
+                font-size: 16px !important;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: white;
+                transition: border-color 0.3s ease;
+            }
+            
+            #other_referral:focus {
+                border-color: #d4af37;
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+            }
+            
             #submitButton {
                 padding: 12px !important;
                 font-size: 1rem !important;
@@ -582,7 +642,7 @@
             
             /* Success/error messages */
             #successMessage, #errorMessage {
-                padding: 20px !important;
+                padding: 15px !important;
             }
         }
         
@@ -604,9 +664,15 @@
                 font-size: 0.95rem !important;
             }
             
-            /* Success/error messages */
-            #successMessage, #errorMessage {
-                padding: 15px !important;
+            /* Style for the referral source dropdown */
+            #referral_source {
+                width: 100%;
+                padding: 12px !important;
+                font-size: 16px !important;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: white;
+                transition: border-color 0.3s ease;
             }
             
             #successMessage h3, #errorMessage h4 {
@@ -1140,202 +1206,153 @@
             }
         });
 
-        // Form submission handling
-        function submitForm(form) {
-            // Add current date and time to hidden fields
-            const now = new Date();
-            document.getElementById('submission_date').value = now.toLocaleDateString();
-            document.getElementById('submission_time').value = now.toLocaleTimeString();
+        // Add this after your existing submitForm function but before the closing </body> tag
+        async function submitForm(form) {
+            // Prevent default form submission
+            event.preventDefault();
             
-            // Show loading state
+            // Check if "Other" is selected but the text field is empty
+            const referralSource = document.getElementById('referral_source');
+            const otherReferral = document.getElementById('other_referral');
+            
+            if (referralSource.value === 'Other' && otherReferral.value.trim() === '') {
+                otherReferral.setCustomValidity('Please specify how you heard about us');
+                otherReferral.reportValidity();
+                return false;
+            } else {
+                otherReferral.setCustomValidity('');
+            }
+            
+            // Ensure required fields are filled
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return false;
+            }
+            
+            // Get current UTC date and time
+            const now = new Date();
+            const utcDateStr = now.getUTCFullYear() + '-' + 
+                              String(now.getUTCMonth() + 1).padStart(2, '0') + '-' + 
+                              String(now.getUTCDate()).padStart(2, '0');
+            const utcTimeStr = String(now.getUTCHours()).padStart(2, '0') + ':' + 
+                              String(now.getUTCMinutes()).padStart(2, '0') + ':' + 
+                              String(now.getUTCSeconds()).padStart(2, '0');
+            const formattedDateTime = utcDateStr + ' ' + utcTimeStr;
+            
             const submitButton = document.getElementById('submitButton');
             const originalButtonText = submitButton.innerHTML;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Submitting...';
             submitButton.disabled = true;
             
-            // Hide any previous status messages
-            document.getElementById('formStatus').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'none';
-            document.getElementById('errorMessage').style.display = 'none';
-            
-            // Get form data
-            const formData = new FormData(form);
-            
-            // Convert FormData to URL-encoded string
-            const data = [...formData.entries()];
-            const asString = data
-                .map(x => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
-                .join('&');
-            
-            // For testing purposes, simulate a successful submission
-            setTimeout(function() {
+            try {
+                // Instead of FormData, let's use a more reliable approach with URL parameters
+                // Create a URL search params object
+                const params = new URLSearchParams();
+                
+                // Add form fields manually
+                params.append('name', document.getElementById('name').value);
+                params.append('email', document.getElementById('email').value);
+                params.append('phone', document.getElementById('phone').value);
+                params.append('source', document.getElementById('referral_source').value);
+                
+                // Handle "Other" option
+                if (referralSource.value === 'Other' && otherReferral.value.trim() !== '') {
+                    params.append('otherSourceText', otherReferral.value.trim());
+                } else {
+                    params.append('otherSourceText', '');
+                }
+                
+                // Add timestamp 
+                params.append('submission_datetime', formattedDateTime);
+                
+                // Log the data being sent for debugging
+                console.log("Sending data:", params.toString());
+                
+                // Send as URL-encoded form data with no-cors mode
+                // We append parameters to the URL to ensure Google Apps Script receives them reliable
+                // even in no-cors mode where body parsing can sometimes fail.
+                await fetch('https://script.google.com/macros/s/AKfycbwBXLFOYY-31tDNqPp6GbnXvDcl9-cDZgfjSbNmKbST-yoUZSpk3Vza_AD4HhJ2Qn2l/exec?' + params.toString(), {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                });
+                
+                // With no-cors, we can't read the response status or body (it's opaque).
+                // We assume success if the network request didn't throw an error.
+                
                 // Hide the form
                 form.style.display = 'none';
+                const formHeading = document.getElementById('formHeading');
+                const formDescription = document.getElementById('formDescription');
+                if (formHeading) formHeading.style.display = 'none';
+                if (formDescription) formDescription.style.display = 'none';
                 
-                // Create calendar container
-                const calendarContainer = document.createElement('div');
-                calendarContainer.className = 'calendar-container';
-                calendarContainer.style.padding = '30px';
-                calendarContainer.style.backgroundColor = '#f8f9fa';
-                calendarContainer.style.border = '2px solid #d4af37';
-                calendarContainer.style.borderRadius = '8px';
-                calendarContainer.style.boxShadow = '0 6px 20px rgba(0,0,0,0.15)';
-                calendarContainer.style.textAlign = 'center';
+                // Show success message with scheduling button
+                const formStatus = document.getElementById('formStatus');
+                const successMessage = document.getElementById('successMessage');
                 
-                // Add success message
-                const thankYouMessage = document.createElement('div');
-                thankYouMessage.innerHTML = `
-                    <i class="fas fa-check-circle" style="color: #d4af37; font-size: 4rem; margin-bottom: 20px; display: block;"></i>
-                    <h3 style="margin-bottom: 15px; color: #1a2b4a; font-size: 1.8rem; font-weight: 600;">Thank You!</h3>
-                    <p style="font-size: 1.1rem; margin-bottom: 20px;">Your contact information has been successfully submitted.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Click the button below to schedule your consultation:</p>
-                    <div style="width: 60px; height: 4px; background-color: #d4af37; margin: 0 auto 30px;"></div>
-                `;
-                calendarContainer.appendChild(thankYouMessage);
-                
-                // Add calendar widget as a button
-                const calendarButton = document.createElement('a');
-                calendarButton.href = "https://zcal.co/i/8F03fn2k";
-                calendarButton.className = "btn btn-gold zcal-inline-widget";
-                calendarButton.style.display = "inline-block";
-                calendarButton.style.padding = "15px 30px";
-                calendarButton.style.backgroundColor = "#d4af37";
-                calendarButton.style.color = "#ffffff";
-                calendarButton.style.fontWeight = "600";
-                calendarButton.style.fontSize = "1.1rem";
-                calendarButton.style.textDecoration = "none";
-                calendarButton.style.borderRadius = "4px";
-                calendarButton.style.border = "none";
-                calendarButton.style.cursor = "pointer";
-                calendarButton.style.transition = "all 0.3s ease";
-                calendarButton.style.boxShadow = "0 4px 10px rgba(0,0,0,0.15)";
-                calendarButton.style.margin = "10px auto 20px";
-                calendarButton.style.textTransform = "uppercase";
-                calendarButton.style.letterSpacing = "1px";
-                calendarButton.style.maxWidth = "100%";
-                calendarButton.style.wordBreak = "break-word";
-                calendarButton.style.whiteSpace = "normal";
-                calendarButton.innerHTML = '<i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Schedule Your Consultation';
-                
-                // Add hover effect
-                calendarButton.onmouseover = function() {
-                    this.style.backgroundColor = "#c19b2e";
-                    this.style.boxShadow = "0 6px 15px rgba(0,0,0,0.2)";
-                    this.style.transform = "translateY(-2px)";
-                };
-                calendarButton.onmouseout = function() {
-                    this.style.backgroundColor = "#d4af37";
-                    this.style.boxShadow = "0 4px 10px rgba(0,0,0,0.15)";
-                    this.style.transform = "translateY(0)";
-                };
-                
-                calendarContainer.appendChild(calendarButton);
-                
-                // Add responsive styles for mobile
-                const responsiveStyle = document.createElement('style');
-                responsiveStyle.textContent = `
-                    @media (max-width: 768px) {
-                        .calendar-container {
-                            padding: 20px 15px !important;
-                        }
-                        
-                        .calendar-container h3 {
-                            font-size: 1.5rem !important;
-                        }
-                        
-                        .calendar-container p {
-                            font-size: 1rem !important;
-                        }
-                        
-                        .calendar-container .btn {
-                            padding: 12px 20px !important;
-                            font-size: 0.95rem !important;
-                            width: 100% !important;
-                        }
-                        
-                        .calendar-container .fa-check-circle {
-                            font-size: 3rem !important;
-                        }
-                    }
+                if (formStatus && successMessage) {
+                    formStatus.style.display = 'block';
+                    successMessage.style.display = 'block';
                     
-                    @media (max-width: 480px) {
-                        .calendar-container {
-                            padding: 15px 10px !important;
-                        }
-                        
-                        .calendar-container h3 {
-                            font-size: 1.3rem !important;
-                        }
-                        
-                        .calendar-container .btn {
-                            padding: 10px 15px !important;
-                            font-size: 0.9rem !important;
-                        }
-                    }
-                `;
-                document.head.appendChild(responsiveStyle);
-                
-                // Replace form with calendar
-                const luxuryCard = form.closest('.luxury-card');
-                if (luxuryCard) {
-                    luxuryCard.innerHTML = ''; // Clear the card content
-                    luxuryCard.appendChild(calendarContainer);
-                    
-                    // Make sure the luxury card is responsive too
-                    luxuryCard.style.width = "100%";
-                    luxuryCard.style.maxWidth = "100%";
-                    luxuryCard.style.boxSizing = "border-box";
-                    
-                    // Scroll to calendar
-                    luxuryCard.scrollIntoView({ behavior: 'smooth' });
+                    // Scroll to success message
+                    successMessage.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
                 }
                 
-                // Reset form (in background)
+                // Reset form (hidden)
                 form.reset();
                 
-                // Reset button
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                
+                // Show error message
+                const formStatus = document.getElementById('formStatus');
+                const errorMessage = document.getElementById('errorMessage');
+                
+                if (formStatus && errorMessage) {
+                    formStatus.style.display = 'block';
+                    errorMessage.style.display = 'block';
+                }
+                
+            } finally {
+                // Reset button state
                 submitButton.innerHTML = originalButtonText;
                 submitButton.disabled = false;
-                
-                // Log the submitted data for verification
-                console.log('Form submitted successfully with data:', Object.fromEntries(formData.entries()));
-            }, 1000);
+            }
             
-            // Send the form data using fetch
-            fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: asString,
-                mode: 'no-cors'
-            })
-            .catch(error => {
-                // Show error message only if the timeout hasn't already shown success
-                if (form.style.display !== 'none') {
-                    document.getElementById('formStatus').style.display = 'block';
-                    document.getElementById('errorMessage').style.display = 'block';
-                    
-                    // Reset button
-                    submitButton.innerHTML = originalButtonText;
-                    submitButton.disabled = false;
-                    
-                    console.error('Error submitting form:', error);
-                }
-            });
-            
-            // Prevent default form submission
             return false;
         }
+        
+        // Add event listener for form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    submitForm(this);
+                });
+            }
+        });
 
-        // Add this to ensure the page is fully loaded
-        window.onload = function() {
-            // Force refresh of styles
-            document.body.style.display = 'none';
-            setTimeout(function() {
-                document.body.style.display = 'block';
-            }, 10);
-        };
+        function toggleOtherField() {
+            const referralSource = document.getElementById('referral_source');
+            const otherReferralGroup = document.getElementById('other_referral_group');
+            const otherReferral = document.getElementById('other_referral');
+            
+            if (referralSource.value === 'Other') {
+                otherReferralGroup.style.display = 'block';
+                otherReferral.setAttribute('required', '');
+            } else {
+                otherReferralGroup.style.display = 'none';
+                otherReferral.removeAttribute('required');
+                otherReferral.setCustomValidity('');
+            }
+        }
     </script>
 
     <!-- Add ZCal script to the head -->
