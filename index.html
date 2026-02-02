@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNKCBSMZZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TNKCBSMZZT');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Suits & Bespoke Tailoring in Davis County | Serving Layton, Bountiful, Farmington, Kaysville, Clearfield & Syracuse | Essato Custom Clothing</title>
@@ -20,6 +29,8 @@
                 <li class="nav-item"><a href="index.html" class="nav-link" style="color: #ffffff; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link" style="color: #ffffff; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">About</a></li>
                 <li class="nav-item"><a href="pricing.html" class="nav-link" style="color: #ffffff; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Pricing</a></li>
+                <li class="nav-item"><a href="wedding.html" class="nav-link" style="color: #ffffff; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Wedding</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link" style="color: #ffffff; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Journal</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link" style="color: #ffffff; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Contact</a></li>
             </ul>
             <div class="hamburger" style="display: none; cursor: pointer;">
@@ -36,7 +47,7 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div class="hero-content centered" style="padding: 140px 0; text-align: center;">
                 <h1 style="font-size: 5rem; margin-bottom: 15px; opacity: 0; animation: fadeInUp 0.8s ease forwards 0.3s; line-height: 1.2;">
-                    Custom Clothing in Davis County, Utah
+                    Custom Clothing in Layton
                 </h1>
                 
                 <div class="hero-btns" style="opacity: 0; animation: fadeInUp 0.8s ease forwards 1.2s;">
@@ -175,41 +186,175 @@
         <div class="container" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="section-header text-center" style="margin-bottom: 70px;">
                 <h2 class="section-title" style="color: #ffffff; font-size: 2.8rem; margin-bottom: 20px; font-weight: 500;">Client Experiences</h2>
-                <p style="color: #ffffff; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Read what our clients say about their <a href="about.html#our-roots" style="color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;">custom tailoring experience</a>.</p>
+                <p style="color: #ffffff; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Read what our clients say about their custom tailoring experience.</p>
             </div>
-            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1400px; margin: 0 auto;">
-                <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 40px; position: relative;">
-                    <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
-                    <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;">
-                        <p class="testimonial-text" style="font-size: 1.05rem; line-height: 1.7; color: #333; margin-bottom: 25px; font-style: italic;">"The absolute best customer service you can ask for, Brandon was extremely helpful with the process and he was very patient with me! Not only that, but the quality of the suits were really amazing and I could not be happier with them! These were my first tailored suits, and I will be ordering more!"</p>
-                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
-                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Dakota J.</div>
+            <div class="testimonial-carousel-container" style="max-width: 1000px; margin: 0 auto; position: relative; padding: 0 40px;">
+                <div class="testimonial-track-container" style="overflow: hidden;">
+                    <div class="testimonial-track" id="testimonialTrack" style="display: flex; transition: transform 0.5s ease-in-out;">
+                        <!-- Card 1: Liz N. -->
+                        <div class="testimonial-slide" style="flex: 0 0 100%; padding: 10px;">
+                            <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); padding: 50px 40px; position: relative; height: 100%;">
+                                <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
+                                <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; height: 100%;">
+                                    <p class="testimonial-text" style="font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 30px; font-style: italic; min-height: 120px; display: flex; align-items: center;">"Brandon was amazing! We had no idea what to look for in a wedding suit and he walked us through all of the options for colors and fit and helped make the process easy. The suit turned out amazing and looked incredible in our photos! Thank you!"</p>
+                                    <div>
+                                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
+                                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Liz N.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: Ben L. -->
+                        <div class="testimonial-slide" style="flex: 0 0 100%; padding: 10px;">
+                            <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); padding: 50px 40px; position: relative; height: 100%;">
+                                <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
+                                <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; height: 100%;">
+                                    <p class="testimonial-text" style="font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 30px; font-style: italic; min-height: 120px; display: flex; align-items: center;">"I was having a hard time finding a suit. A lot of the stops I made felt like they were lacking in quality but working with Brandon was exactly what I was looking for. On top of him meeting the quality I needed he also worked within my time frame. Since I had been looking for a suit for so long I was running out of time and the wedding was getting closer but Brandon managed to get me in there! He was super helpful with feedback and gave me a great range of suits to pick from. I’m extremely satisfied with this suit and my shirts I got from him. If you are looking for a suit he’s your guy!"</p>
+                                    <div>
+                                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
+                                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Ben L.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Carsten H. -->
+                        <div class="testimonial-slide" style="flex: 0 0 100%; padding: 10px;">
+                            <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); padding: 50px 40px; position: relative; height: 100%;">
+                                <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
+                                <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; height: 100%;">
+                                    <p class="testimonial-text" style="font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 30px; font-style: italic; min-height: 120px; display: flex; align-items: center;">"Brandon was incredible to work with! He was professional and extremely helpful in getting the exact suit I wanted for my wedding. He has so many customization options that it makes me feel like I have my one-of-a-kind suit. The meeting was quick, efficient, and very smooth from start to finish. I also felt like the prices were extremely fair and lower than any other custom suit shop I looked at. Get your suit from esatto!"</p>
+                                    <div>
+                                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
+                                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Carsten H.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Zachary L. -->
+                        <div class="testimonial-slide" style="flex: 0 0 100%; padding: 10px;">
+                            <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); padding: 50px 40px; position: relative; height: 100%;">
+                                <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
+                                <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; height: 100%;">
+                                    <p class="testimonial-text" style="font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 30px; font-style: italic; min-height: 120px; display: flex; align-items: center;">"Found my new business to buy dress shirts and suits from! Brandon does a great job, and offers an unbeatable price for the quality. I’d recommend everyone use him!"</p>
+                                    <div>
+                                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
+                                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Zachary L.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Philip L. -->
+                        <div class="testimonial-slide" style="flex: 0 0 100%; padding: 10px;">
+                            <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); padding: 50px 40px; position: relative; height: 100%;">
+                                <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
+                                <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; height: 100%;">
+                                    <p class="testimonial-text" style="font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 30px; font-style: italic; min-height: 120px; display: flex; align-items: center;">"Great place to get a suit! I got an amazing suit for my wedding here. Brandon is a master at fitting you in the right suit. He's very thorough, down to the smallest details. 10/10 recommend!"</p>
+                                    <div>
+                                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
+                                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Philip L.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 40px; position: relative;">
-                    <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
-                    <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;">
-                        <p class="testimonial-text" style="font-size: 1.05rem; line-height: 1.7; color: #333; margin-bottom: 25px; font-style: italic;">"My suit is so well done and fits perfectly! Thank you my friend!"</p>
-                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
-                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">William A.</div>
-                    </div>
+
+                <!-- Navigation Controls -->
+                <button class="carousel-nav prev" onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: -20px; transform: translateY(-50%); background: transparent; border: none; color: white; font-size: 3rem; cursor: pointer; opacity: 0.5; transition: opacity 0.3s;">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next" onclick="moveSlide(1)" style="position: absolute; top: 50%; right: -20px; transform: translateY(-50%); background: transparent; border: none; color: white; font-size: 3rem; cursor: pointer; opacity: 0.5; transition: opacity 0.3s;">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots -->
+                <div class="carousel-dots" style="text-align: center; margin-top: 30px;">
+                    <span class="dot active" onclick="currentSlide(0)" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; transition: all 0.3s;"></span>
+                    <span class="dot" onclick="currentSlide(1)" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; transition: all 0.3s;"></span>
+                    <span class="dot" onclick="currentSlide(2)" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; transition: all 0.3s;"></span>
+                    <span class="dot" onclick="currentSlide(3)" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; transition: all 0.3s;"></span>
+                    <span class="dot" onclick="currentSlide(4)" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; transition: all 0.3s;"></span>
                 </div>
-                <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 40px; position: relative;">
-                    <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
-                    <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;">
-                        <p class="testimonial-text" style="font-size: 1.05rem; line-height: 1.7; color: #333; margin-bottom: 25px; font-style: italic;">"Brandon was great to work with and the process was easy. I'm very satisfied with the suits and will definitely be ordering again."</p>
-                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
-                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Don C.</div>
-                    </div>
+
+                <style>
+                    .carousel-nav:hover { opacity: 1 !important; color: #d4af37 !important; }
+                    .dot.active { background-color: #d4af37 !important; transform: scale(1.2); }
+                    @media (max-width: 768px) {
+                        .testimonial-carousel-container { padding: 0 !important; }
+                        .carousel-nav { display: none !important; }
+                    }
+                </style>
+
+                <script>
+                    let slideIndex = 0;
+                    const track = document.getElementById('testimonialTrack');
+                    const dots = document.getElementsByClassName('dot');
+                    const totalSlides = 5;
+
+                    function updateSlide() {
+                        track.style.transform = `translateX(-${slideIndex * 100}%)`;
+                        for (let i = 0; i < dots.length; i++) {
+                            dots[i].classList.remove('active');
+                            dots[i].style.backgroundColor = 'rgba(255,255,255,0.3)';
+                            dots[i].style.transform = 'scale(1)';
+                        }
+                        dots[slideIndex].classList.add('active');
+                        dots[slideIndex].style.backgroundColor = '#d4af37';
+                        dots[slideIndex].style.transform = 'scale(1.2)';
+                    }
+
+                    function moveSlide(n) {
+                        slideIndex += n;
+                        if (slideIndex >= totalSlides) { slideIndex = 0; }
+                        if (slideIndex < 0) { slideIndex = totalSlides - 1; }
+                        updateSlide();
+                    }
+
+                    function currentSlide(n) {
+                        slideIndex = n;
+                        updateSlide();
+                    }
+
+                    // Auto advance every 5 seconds
+                    setInterval(function() {
+                        moveSlide(1);
+                    }, 6000);
+                </script>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="color: #d4af37; font-size: 0.9rem; margin-bottom: 20px; font-weight: 500; letter-spacing: 2px;">ENJOYED YOUR EXPERIENCE?</p>
+                <div style="color: #d4af37; font-size: 1.2rem; margin-bottom: 30px;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.97); border-radius: 6px; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 40px; position: relative;">
-                    <div style="position: absolute; top: 25px; right: 30px; color: #d4af37; font-size: 60px; opacity: 0.15; font-family: Georgia, serif;">"</div>
-                    <div class="testimonial-content" style="display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;">
-                        <p class="testimonial-text" style="font-size: 1.05rem; line-height: 1.7; color: #333; margin-bottom: 25px; font-style: italic;">"I received the suits yesterday and tried them on last night. They fit great!"</p>
-                        <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 15px;"></div>
-                        <div class="testimonial-author" style="font-size: 1.1rem; font-weight: 600; color: #1a2b4a;">Jason H.</div>
-                    </div>
-                </div>
+                <a href="https://www.google.com/maps/place/esatto/@41.0748246,-111.9621776,20.5z/data=!4m7!3m6!1s0x8753037ba3edd23b:0x33d3a1429c71d6a!4b1!8m2!3d41.0748276!4d-111.962127!16s%2Fg%2F11x95kgs6x?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="google-review-btn" style="
+                    display: inline-block;
+                    padding: 18px 40px;
+                    font-size: 0.95rem;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    background: rgba(255,255,255,0.05);
+                    border: 1px solid rgba(255,255,255,0.2);
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    font-weight: 500;">
+                    <i class="fab fa-google" style="margin-right: 12px; color: #d4af37;"></i> Leave us a Review on Google
+                </a>
+                <style>
+                    .google-review-btn:hover {
+                        background: #d4af37 !important;
+                        border-color: #d4af37 !important;
+                        color: #1a2b4a !important;
+                    }
+                    .google-review-btn:hover i {
+                        color: #1a2b4a !important;
+                    }
+                </style>
             </div>
         </div>
     </section>
@@ -219,8 +364,8 @@
         <div class="container">
             <div class="flagship-grid">
                 <div class="flagship-content">
-                    <h2>Your Local Custom Tailor</h2>
-                    <h3 style="color: #d4af37; font-size: 1.8rem; margin: 15px 0;">Serving All of Davis County</h3>
+                    <h2>Visit Our Studio</h2>
+                    <h3 style="color: #d4af37; font-size: 1.8rem; margin: 15px 0;">Serving All of Layton</h3>
                     <p>Visit our Layton studio, conveniently located for clients from Bountiful, Farmington, Kaysville, Clearfield, and Syracuse. <a href="contact.html" style="color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;">Schedule your fitting appointment</a> or <a href="about.html#location" style="color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;">learn more about our studio</a>.</p>
                     <address style="margin: 25px 0;">
                         <p><i class="fas fa-map-marker-alt"></i> 207 E Gordon Ave, Suite 4, Layton, UT 84041</p>

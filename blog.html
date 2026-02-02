@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Esatto Journal | Custom Suits & Style Guide</title>
+    <link rel="stylesheet" href="style_blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; z-index: 100; height: 90px; border-bottom: none;">
+        <div class="container nav-container" style="display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; justify-content: flex-start; flex: 2; border: none; outline: none; background: none;">
+                <img src="essatologo.png" alt="Essato Custom" style="width: 140px; height: auto; margin-top: 5px; border: none;">
+            </a>
+            <ul class="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 40px; flex: 3; justify-content: flex-end;">
+                <li class="nav-item"><a href="index.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">About</a></li>
+                <li class="nav-item"><a href="pricing.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Pricing</a></li>
+                <li class="nav-item"><a href="wedding.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Wedding</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Journal</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Contact</a></li>
+            </ul>
+            <div class="hamburger" style="display: none; cursor: pointer;">
+                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
+                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
+                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Esatto Journal</h1>
+            <p>Craftsmanship, style, and the art of dressing well</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Article New -->
+                <article class="blog-card">
+                    <a href="our-fitting-process.html" class="blog-image-wrapper">
+                        <img src="our_fitting_process_blog.jpg" alt="Suit Fitting Process" class="blog-image">
+                    </a>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Jan 27, 2026</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h2 class="blog-title"><a href="our-fitting-process.html">Our Fitting Process</a></h2>
+                        <p class="blog-excerpt">What’s the key to a perfectly fitted suit? It might seem complicated, but it all comes down to the measurements the tailor uses to cut and sew.</p>
+                        <a href="our-fitting-process.html" class="read-more">
+                            Read Article
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in Touch</h2>
+                <p>Get style insights and updates delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Esatto Custom</h4>
+                    <p>Premium custom clothing with a focus on fit, quality, and personal service.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@esattocustom.com">info@esattocustom.com</a></li>
+                        <li><a href="tel:8011234567">(801) 123-4567</a></li>
+                        <li>Layton, Utah</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Esatto Custom Clothing. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
