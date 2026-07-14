@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNKCBSMZZT"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-TNKCBSMZZT');
+        gtag('config', 'G-TNKCBSMZZT');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Win Free Custom Dress Shoes ($350 Value) | Esatto Custom Giveaway</title>
-    <meta name="description" content="Enter Esatto Custom's Shoe Giveaway to win 1 pair of custom dress shoes for free ($350 value). Refer friends to double your chances. Ends July 18, 2026.">
+    <meta name="description"
+        content="Enter Esatto Custom's Shoe Giveaway to win 1 pair of custom dress shoes for free ($350 value). Refer friends to double your chances. Ends July 18, 2026.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- Google reCAPTCHA v3 site key definition -->
     <script>
         window.RECAPTCHA_SITE_KEY = '6Le-t7osAAAAAG-cS12QfxDkNCnjs-x4YhJHX7MP';
@@ -32,62 +35,64 @@
         }
 
         .giveaway-hero {
-            background-image: url('giveaway hero.JPG');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #1a2b4a 0%, #111111 100%);
             position: relative;
-            padding-top: 90px;
-            min-height: 80vh;
+            padding-top: 140px;
+            padding-bottom: 80px;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             color: var(--light-color);
         }
 
-        .giveaway-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .giveaway-hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(26, 43, 64, 0.9) 0%, rgba(17, 17, 17, 0.8) 100%);
         }
 
-        .giveaway-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 80px 0;
-            max-width: 800px;
-            margin: 0 auto;
+        .giveaway-hero-text {
+            flex: 1.2;
+            text-align: left;
         }
 
-        .giveaway-badge {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--dark-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 8px 24px;
-            margin-bottom: 25px;
-            box-shadow: var(--gold-glow);
-        }
-
-        .giveaway-hero-content h1 {
+        .giveaway-hero-text h1 {
             color: var(--light-color);
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 20px;
             font-family: var(--font-secondary);
         }
 
         .giveaway-value-tag {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
             color: var(--secondary-color);
             font-weight: 400;
             letter-spacing: 1px;
             margin-bottom: 35px;
             font-family: var(--font-primary);
+        }
+
+        .giveaway-hero-image-wrapper {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .giveaway-hero-img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .giveaway-hero-img:hover {
+            transform: scale(1.03);
         }
 
         /* Countdown Style */
@@ -203,7 +208,8 @@
             box-shadow: var(--box-shadow);
         }
 
-        .referral-card h2, .referral-card h3 {
+        .referral-card h2,
+        .referral-card h3 {
             color: var(--light-color);
         }
 
@@ -305,52 +311,66 @@
         }
 
         @media (max-width: 768px) {
+            .giveaway-hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 35px;
+            }
+
+            .giveaway-hero-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .giveaway-hero {
+                padding-top: 120px;
+                padding-bottom: 50px;
+            }
+
             .steps-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
             .countdown-grid {
                 gap: 10px;
                 max-width: 100%;
             }
+
             .countdown-card {
                 padding: 12px 5px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
-    <header style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; z-index: 100; height: 90px; border-bottom: none;">
-        <div class="container nav-container" style="display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
-            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; justify-content: flex-start; flex: 2; border: none; outline: none; background: none;">
-                <img src="essatologo.png" alt="Essato Custom" style="height: auto; width: 180px; margin-top: 5px; border: none;">
+    <header
+        style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; z-index: 100; height: 90px; border-bottom: none;">
+        <div class="container nav-container"
+            style="display: flex; justify-content: center; align-items: center; height: 100%; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
+            <a href="#"
+                style="text-decoration: none; display: flex; align-items: center; justify-content: center; border: none; outline: none; background: none;">
+                <img src="essatologo.png" alt="Esatto Custom"
+                    style="height: auto; width: 180px; margin-top: 5px; border: none;">
             </a>
-            <ul class="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 40px; flex: 3; justify-content: flex-end;">
-                <li class="nav-item"><a href="index.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">HOME</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">ABOUT</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">PRICING</a></li>
-                <li class="nav-item"><a href="wedding.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">WEDDINGS</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">JOURNAL</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">CONTACT</a></li>
-            </ul>
-            <div class="hamburger" style="display: none; cursor: pointer;">
-                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
-                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
-                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
-            </div>
         </div>
     </header>
 
     <!-- Giveaway Hero Section -->
-    <section class="giveaway-hero" role="img" aria-label="Luxury Custom Shoe Giveaway by Esatto Custom Clothing">
-        <div class="giveaway-hero-overlay"></div>
-        <div class="container">
-            <div class="giveaway-hero-content">
-                <span class="giveaway-badge">Limited Time Offer</span>
+    <section class="giveaway-hero" aria-label="Luxury Custom Shoe Giveaway by Esatto Custom Clothing">
+        <div class="container giveaway-hero-container">
+            <div class="giveaway-hero-text">
                 <h1>Custom Shoe Giveaway!</h1>
-                <p class="giveaway-value-tag">Win 1 Pair of Custom Dress Shoes, FREE!<br><strong>($350 Value)</strong></p>
-                <a href="#giveaway-form-anchor" class="btn btn-gold" id="enterNowButton" style="padding: 16px 40px;">Enter Now!</a>
+                <p class="giveaway-value-tag">Win 1 Pair of Custom Dress Shoes, FREE!<br><strong>($350 Value)</strong>
+                </p>
+                <a href="#giveaway-form-anchor" class="btn btn-gold" id="enterNowButton"
+                    style="padding: 16px 40px;">Enter Now!</a>
+            </div>
+            <div class="giveaway-hero-image-wrapper">
+                <img src="giveaway hero.JPG" alt="Esatto Custom Dress Shoes" class="giveaway-hero-img">
             </div>
         </div>
     </section>
@@ -376,7 +396,8 @@
                     <span class="countdown-lbl">Seconds</span>
                 </div>
             </div>
-            <p id="timerMessage" style="text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; margin-top: 15px; margin-bottom: 0; letter-spacing: 1px; text-transform: uppercase;">
+            <p id="timerMessage"
+                style="text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; margin-top: 15px; margin-bottom: 0; letter-spacing: 1px; text-transform: uppercase;">
                 Giveaway ends 8:00pm MST on July 18, 2026
             </p>
         </div>
@@ -386,8 +407,7 @@
     <section class="section" style="padding: 80px 0 40px;">
         <div class="container" style="max-width: 900px;">
             <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                <h2>How to Enter the Giveaway</h2>
-                <p>Complete the two simple steps below to enter the drawing for a custom-made pair of Esatto dress shoes.</p>
+                <h2>How to Enter</h2>
             </div>
 
             <!-- Steps Grid -->
@@ -395,14 +415,16 @@
                 <div class="step-box">
                     <h3><span class="step-number">1</span> Follow on Instagram</h3>
                     <p>Click below to follow Esatto Custom on Instagram to validate your entry.</p>
-                    <a href="https://www.instagram.com/esattocustom/" target="_blank" class="btn btn-outline" style="width: 100%; text-align: center; font-size: 0.85rem; padding: 10px 20px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+                    <a href="https://www.instagram.com/esattocustom/" target="_blank" class="btn btn-outline"
+                        style="width: 100%; text-align: center; font-size: 0.85rem; padding: 10px 20px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
                         <i class="fab fa-instagram" style="font-size: 1.2rem;"></i> Follow @esattocustom
                     </a>
                 </div>
                 <div class="step-box">
                     <h3><span class="step-number">2</span> Submit Your Info</h3>
                     <p>Provide your information in the intake form below so we can contact you if you win.</p>
-                    <a href="#giveaway-form-anchor" class="btn" style="width: 100%; text-align: center; font-size: 0.85rem; padding: 10px 20px; display: block; border-color: var(--primary-color);">
+                    <a href="#giveaway-form-anchor" class="btn"
+                        style="width: 100%; text-align: center; font-size: 0.85rem; padding: 10px 20px; display: block; border-color: var(--primary-color);">
                         Go To Form
                     </a>
                 </div>
@@ -413,52 +435,57 @@
             <!-- Form Wrapper -->
             <div class="contact-form">
                 <div class="luxury-card" style="padding: 3.5rem 3rem;">
-                    <h3 id="formHeading" style="text-align: center; margin-bottom: 10px;">Giveaway Entry Form</h3>
-                    <p id="formDescription" style="text-align: center; margin-bottom: 3rem;">Fill out the details below to complete your entry.</p>
-                    
+                    <h3 id="formHeading" style="text-align: center; margin-bottom: 3rem;">Giveaway Entry Form</h3>
+
                     <form id="giveawayForm" method="POST">
                         <!-- Identifies submission type for Apps Script routing -->
                         <input type="hidden" name="formType" value="giveaway">
-                        
+
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="phone">Mobile Number</label>
                             <input type="tel" id="phone" name="phone" placeholder="(801) 555-0199" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="referredBy">Who Referred You? <span style="font-size: 0.75rem; color: #888; text-transform: none;">(Optional)</span></label>
+                            <label for="referredBy">Who Referred You? <span
+                                    style="font-size: 0.75rem; color: #888; text-transform: none;">(Optional)</span></label>
                             <input type="text" id="referredBy" name="referredBy" placeholder="Friend's Full Name">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="shoePreference">If you win, what color/style of shoe do you want?</label>
-                            <input type="text" id="shoePreference" name="shoePreference" placeholder="e.g. Classic Black Oxfords, Brown Wingtips" required>
-                        </div>
-                        
+
                         <!-- reCAPTCHA v3 hidden field -->
                         <input type="hidden" id="recaptchaToken" name="recaptchaToken">
-                        
-                        <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 15px;" id="submitButton">Submit Giveaway Entry</button>
+
+                        <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 15px;"
+                            id="submitButton">Submit your info</button>
                     </form>
 
                     <!-- Submission Feedback Box -->
                     <div id="formStatus" style="margin-top: 20px; display: none;">
-                        <div id="successMessage" style="color: #1a2b4a; background-color: #f8f9fa; border: 2px solid #d4af37; border-radius: 8px; padding: 40px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.12);">
-                            <i class="fas fa-check-circle" style="color: #d4af37; font-size: 4.5rem; margin-bottom: 20px; display: block;"></i>
-                            <h3 style="margin-bottom: 15px; color: #1a2b4a; font-size: 2rem; font-weight: 600;">You are Entered!</h3>
-                            <p style="font-size: 1.1rem; margin-bottom: 20px;">Thank you for entering the Esatto Custom Shoe Giveaway. Good luck!</p>
-                            <p style="font-size: 1rem; color: #666; margin-bottom: 0;">Be sure to check your notifications. If you win, we will text you directly.</p>
-                            <div style="width: 80px; height: 3px; background-color: #d4af37; margin: 25px auto 0;"></div>
+                        <div id="successMessage"
+                            style="color: #1a2b4a; background-color: #f8f9fa; border: 2px solid #d4af37; border-radius: 8px; padding: 40px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.12);">
+                            <i class="fas fa-check-circle"
+                                style="color: #d4af37; font-size: 4.5rem; margin-bottom: 20px; display: block;"></i>
+                            <h3 style="margin-bottom: 15px; color: #1a2b4a; font-size: 2rem; font-weight: 600;">You are
+                                Entered!</h3>
+                            <p style="font-size: 1.1rem; margin-bottom: 20px;">Thank you for entering the Esatto Custom
+                                Shoe Giveaway. Good luck!</p>
+                            <p style="font-size: 1rem; color: #666; margin-bottom: 0;">Be sure to check your
+                                notifications. If you win, we will text you directly.</p>
+                            <div style="width: 80px; height: 3px; background-color: #d4af37; margin: 25px auto 0;">
+                            </div>
                         </div>
-                        <div id="errorMessage" style="color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 25px; text-align: center; display: none;">
-                            <i class="fas fa-exclamation-circle" style="color: #721c24; font-size: 3rem; margin-bottom: 15px;"></i>
+                        <div id="errorMessage"
+                            style="color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 25px; text-align: center; display: none;">
+                            <i class="fas fa-exclamation-circle"
+                                style="color: #721c24; font-size: 3rem; margin-bottom: 15px;"></i>
                             <h4 style="margin-bottom: 10px; color: #721c24; font-size: 1.2rem;">Submission Failed</h4>
-                            <p>We encountered a problem submitting your entry. Please check your internet connection and try again.</p>
+                            <p>We encountered a problem submitting your entry. Please check your internet connection and
+                                try again.</p>
                         </div>
                     </div>
                 </div>
@@ -466,17 +493,23 @@
 
             <!-- Increase Your Odds Box -->
             <div class="referral-card">
-                <h3 style="margin-bottom: 15px; font-family: var(--font-primary); font-size: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 15px;">
+                <h3
+                    style="margin-bottom: 15px; font-family: var(--font-primary); font-size: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 15px;">
                     <i class="fas fa-users" style="color: var(--secondary-color);"></i> Increase Your Odds
                 </h3>
-                <p style="margin-bottom: 15px; font-size: 1.05rem;">Improve your chances of winning by referring friends to this giveaway!</p>
-                <p style="margin-bottom: 0; color: var(--secondary-color); font-weight: 500; font-size: 1.1rem; line-height: 1.5;">
+                <p style="margin-bottom: 15px; font-size: 1.05rem;">Improve your chances of winning by referring friends
+                    to this giveaway!</p>
+                <p
+                    style="margin-bottom: 0; color: var(--secondary-color); font-weight: 500; font-size: 1.1rem; line-height: 1.5;">
                     If a friend that you refer wins, you win a pair of custom dress shoes too!
                 </p>
-                
+
                 <div class="referral-box">
-                    <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 5px;">Text or DM this to your friends:</p>
-                    <textarea class="referral-text" id="shareText" readonly>Hey! Esatto Custom is giving away a free pair of custom dress shoes ($350 value). Enter here and put my name in the 'Who Referred You?' field so if either of us wins, we both win a pair! https://esattocustom.com/giveaway.html</textarea>
+                    <p
+                        style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 5px;">
+                        Text or DM this to your friends:</p>
+                    <textarea class="referral-text" id="shareText"
+                        readonly>Hey my suit guy is doing a custom dress shoe giveaway. You shold enter too: https://esattocustom.com/giveaway</textarea>
                     <button class="copy-btn" id="copyShareBtn">
                         <i class="fas fa-copy"></i> <span id="copyBtnText">Copy Share Text</span>
                     </button>
@@ -492,28 +525,41 @@
                 <div class="accordion-content" id="termsAccordionContent">
                     <h4 style="margin-bottom: 15px; font-weight: 600;">Eligibility</h4>
                     <ul>
-                        <li>Open to legal residents of the United States who are 18 years of age or older at the time of entry.</li>
-                        <li>Employees of Esatto Custom Clothing and their immediate family members are not eligible to participate.</li>
+                        <li>Open to legal residents of the United States who are 18 years of age or older at the time of
+                            entry.</li>
+                        <li>Employees of Esatto Custom Clothing and their immediate family members are not eligible to
+                            participate.</li>
                     </ul>
 
                     <h4 style="margin-bottom: 15px; font-weight: 600;">Entries</h4>
                     <ul>
-                        <li>Limit of one (1) entry per person. Duplicate entries from the same person or mobile number will be disqualified.</li>
-                        <li>No purchase is necessary to enter or win. A purchase will not increase your chances of winning.</li>
+                        <li>Limit of one (1) entry per person. Duplicate entries from the same person or mobile number
+                            will be disqualified.</li>
+                        <li>No purchase is necessary to enter or win. A purchase will not increase your chances of
+                            winning.</li>
                     </ul>
 
                     <h4 style="margin-bottom: 15px; font-weight: 600;">Winner Selection & Notification</h4>
                     <ul>
-                        <li>One (1) winner will be selected randomly from all eligible entries received before the giveaway closes.</li>
-                        <li>The draw will take place shortly after the countdown ends. The winner will be notified via SMS text message.</li>
-                        <li><strong>Referral Rule:</strong> If the selected winner is not a previous customer of Esatto Custom and indicated in their entry form that they were referred by another eligible entrant, the individual named as the referrer will also win a free pair of custom dress shoes.</li>
+                        <li>One (1) winner will be selected randomly from all eligible entries received before the
+                            giveaway closes.</li>
+                        <li>The draw will take place shortly after the giveaway closes. The winner will be notified via
+                            SMS text message.</li>
+                        <li><strong>Referral Rule:</strong> If the selected winner is not a previous customer of Esatto
+                            Custom and indicated in their entry form that they were referred by another eligible
+                            entrant, the individual named as the referrer will also win a free pair of custom dress
+                            shoes.</li>
                     </ul>
 
                     <h4 style="margin-bottom: 15px; font-weight: 600;">Prize Details & Redemption</h4>
                     <ul>
-                        <li>The prize consists of one (1) pair of custom-made dress shoes from Esatto Custom (valued at $350).</li>
-                        <li>The prize is non-transferable, non-refundable, and cannot be redeemed for cash or credit.</li>
-                        <li><strong>Redemption Location:</strong> All winners must schedule and attend a custom fitting before August 1, 2026, at the Esatto office located in Layton, Utah to be measured for and style their custom dress shoes. Shipping is not available.</li>
+                        <li>The prize consists of one (1) pair of custom-made dress shoes from Esatto Custom (valued at
+                            $350).</li>
+                        <li>The prize is non-transferable, non-refundable, and cannot be redeemed for cash or credit.
+                        </li>
+                        <li><strong>Redemption Location:</strong> All winners must schedule and attend a custom fitting
+                            before August 1, 2026, at the Esatto office located in Layton, Utah to be measured for and
+                            style their custom dress shoes. Shipping is not available.</li>
                     </ul>
                 </div>
             </div>
@@ -521,55 +567,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Esatto Custom Clothing</h4>
-                    <p>Premium Custom Suits & Bespoke Clothing</p>
-                    <p class="service-areas">Proudly serving: Layton, Bountiful, Farmington, Kaysville, Clearfield, Syracuse, and surrounding areas in Davis County</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 207 E Gordon Ave, Layton, UT 84041</li>
-                        <li><i class="fas fa-phone"></i> (801) 754 4336</li>
-                        <li><i class="fas fa-envelope"></i> brandon@esattocustom.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2021 Esatto Customs. Best Custom Suits and Bespoke Clothing in Davis County, Utah - Serving Layton, Bountiful, Farmington, Kaysville, Clearfield & Syracuse. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Mobile Sticky CTA -->
-    <div class="mobile-cta-bar" aria-label="Mobile quick actions">
-        <a class="mobile-cta-call" href="tel:+18017544336" aria-label="Call Esatto Custom Clothing">Call (801) 754-4336</a>
-        <a class="mobile-cta-book" href="#giveaway-form-anchor" aria-label="Enter giveaway">Enter Giveaway</a>
-    </div>
-    <div class="mobile-cta-spacer" aria-hidden="true"></div>
 
     <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Mobile Menu Toggle
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
-            
+
             if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function(e) {
+                hamburger.addEventListener('click', function (e) {
                     e.stopPropagation();
                     hamburger.classList.toggle('active');
                     navMenu.classList.toggle('active');
@@ -594,7 +602,7 @@
                     }, 300);
                 }
 
-                document.addEventListener('click', function(e) {
+                document.addEventListener('click', function (e) {
                     if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
                         closeMenu();
                     }
@@ -637,9 +645,9 @@
                     document.getElementById('hours').innerHTML = "00";
                     document.getElementById('minutes').innerHTML = "00";
                     document.getElementById('seconds').innerHTML = "00";
-                    
+
                     document.getElementById('timerMessage').innerHTML = "Giveaway Ended";
-                    
+
                     // Disable form fields & submit button
                     const form = document.getElementById('giveawayForm');
                     if (form) {
@@ -675,10 +683,10 @@
             const copyBtnText = document.getElementById('copyBtnText');
 
             if (copyBtn && shareText && copyBtnText) {
-                copyBtn.addEventListener('click', function() {
+                copyBtn.addEventListener('click', function () {
                     shareText.select();
                     shareText.setSelectionRange(0, 99999); // For mobile devices
-                    
+
                     try {
                         navigator.clipboard.writeText(shareText.value).then(() => {
                             showCopiedState();
@@ -699,7 +707,7 @@
                     copyBtnText.textContent = "Copied!";
                     copyBtn.style.backgroundColor = "#1a2b4a";
                     copyBtn.style.color = "#ffffff";
-                    
+
                     setTimeout(() => {
                         copyBtnText.textContent = originalText;
                         copyBtn.style.backgroundColor = "";
@@ -711,9 +719,9 @@
             // Terms Accordion Toggle
             const accordionHeader = document.getElementById('termsAccordionHeader');
             const accordionContent = document.getElementById('termsAccordionContent');
-            
+
             if (accordionHeader && accordionContent) {
-                accordionHeader.addEventListener('click', function() {
+                accordionHeader.addEventListener('click', function () {
                     accordionHeader.classList.toggle('active');
                     if (accordionContent.style.display === 'block') {
                         accordionContent.style.display = 'none';
@@ -726,14 +734,14 @@
             // Form Submit handler
             const form = document.getElementById('giveawayForm');
             if (form) {
-                form.addEventListener('submit', async function(e) {
+                form.addEventListener('submit', async function (e) {
                     e.preventDefault();
-                    
+
                     if (!form.checkValidity()) {
                         form.reportValidity();
                         return;
                     }
-                    
+
                     const submitBtn = document.getElementById('submitButton');
                     const originalBtnText = submitBtn.innerHTML;
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Submitting...';
@@ -759,11 +767,10 @@
                         params.append('name', document.getElementById('name').value);
                         params.append('phone', document.getElementById('phone').value);
                         params.append('referredBy', document.getElementById('referredBy').value);
-                        params.append('shoePreference', document.getElementById('shoePreference').value);
                         params.append('recaptchaToken', token);
 
                         // Submit data asynchronously to Google Apps Script
-                        await fetch('https://script.google.com/macros/s/AKfycbxRhe5HpOXsH7sRsxkJfugJ7uPrmMsv7hNRztL02isKyW3Ccww65EqcqTU8S7j_HaDgFA/exec', {
+                        await fetch('https://script.google.com/macros/s/AKfycbwNdCw6RkEA9R9CQ0JcO-GRFclIEVpK3KvcCZlhE2UFuEoLgmte5-bNhJ1QUZPzNn-3nQ/exec', {
                             method: 'POST',
                             mode: 'no-cors',
                             headers: {
@@ -789,7 +796,7 @@
                                 block: 'center'
                             });
                         }
-                        
+
                         form.reset();
 
                     } catch (error) {
@@ -808,4 +815,5 @@
         });
     </script>
 </body>
+
 </html>

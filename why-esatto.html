@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Esatto? | The Esatto Journal</title>
+    <link rel="stylesheet" href="style_blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .blog-post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        .blog-post-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        .blog-post-content p {
+            margin-bottom: 24px;
+        }
+        .blog-post-content ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+        }
+        .blog-post-content li {
+            margin-bottom: 10px;
+        }
+        .blog-hero {
+            background: url('esatto-definition.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 160px 24px 80px;
+            text-align: center;
+            position: relative;
+        }
+        /* Add a slight overlay only if needed for text readability, or rely on image darkness */
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 43, 64, 0.3); /* Lighter overlay */
+            z-index: 1;
+        }
+        .blog-hero h1, .blog-hero .blog-meta-single {
+            position: relative;
+            z-index: 2;
+        }
+        .blog-hero h1 {
+            color: white;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+        .blog-meta-single {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; z-index: 100; height: 90px; border-bottom: none;">
+        <div class="container nav-container" style="display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; justify-content: flex-start; flex: 2; border: none; outline: none; background: none;">
+                <img src="essatologo.png" alt="Essato Custom" style="width: 140px; height: auto; margin-top: 5px; border: none;">
+            </a>
+            <ul class="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 40px; flex: 3; justify-content: flex-end;">
+                <li class="nav-item"><a href="index.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">About</a></li>
+                <li class="nav-item"><a href="pricing.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Pricing</a></li>
+                <li class="nav-item"><a href="wedding.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Wedding</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Journal</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" style="color: #1a2b4a; text-decoration: none; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">Contact</a></li>
+            </ul>
+            <div class="hamburger" style="display: none; cursor: pointer;">
+                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
+                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
+                <span class="bar" style="display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #1a2b4a;"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <h1>Why Esatto?</h1>
+        <div class="blog-meta-single">
+            <span>Feb 2, 2026</span>
+            <span>•</span>
+            <span>By Brandon</span>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-post-content">
+                <p>I started making custom clothing for friends and family in 2018.</p>
+                
+                <p>At the time, I didn't have a real brand name. I tried a few different names but nothing felt right. For a few years, I just sold 'whitelabeled' suits. No branding. No label on the inside.</p>
+                
+                <h2>Non-Eponymous</h2>
+                <p>A lot of independent clothiers name their brand after themselves. There's nothing wrong with that. But I didn't want the brand to be about me.</p>
+                
+                <p>Most people don't know who I am. And more importantly, I didn't want the quality of the work, the experience, or the standards to be tied to my personality alone.</p>
+                
+                <p>I wanted the brand to stand for something on its own. Something more than Brandon Beck. That forced me to think deeper about what I actually value in a suit—and what I want clients to experience.</p>
+                
+                <h2>What Actually Matters in a Suit</h2>
+                <p>There are three main components to any suit: fit, fabric, and details.</p>
+                
+                <p>Fabric matters, but only to a point. For most men, the fabric doesn't need to be rare or expensive. It just needs to be good enough. You can wear a suit made from incredibly expensive cloth. If it fits poorly, it will look worse than a modest fabric that fits perfectly.</p>
+                
+                <p>The same goes for details. Hand stitching, horn buttons, and custom finishes are great.</p>
+                
+                <p>But if the suit doesn't fit, none of that matters. If you had to choose between a luxurious cashmere wool suit that doesn't fit great, and a perfectly fitted polyester suit, you'd pick the perfectly fitting suit every single time.</p>
+                
+                <p><strong>Until the fit is right, nothing else matters.</strong></p>
+                
+                <h2>Turning a 'Perfect Fit' into a Process</h2>
+                <p>Before I had a brand name, I made custom suits like most other clothiers do. Take 15-20 body measurements with suit details, send them to a factory overseas, and hope for the best.</p>
+                
+                <p>Sometimes the fit would be perfect. Sometimes the fit was awful. I needed a better way to make sure suits came in fitting correctly.</p>
+                
+                <p>Bespoke tailors on Savile Row (London) do this best. They incrementally build the suit around the client over 3-5 fittings to make sure every aspect of the fit is right. But, those suits cost $5000+.</p>
+                
+                <p>So, we use a semi-bespoke fitting process that allows us to fine-tune how a suit actually wears on your body. It doesn't cost the client extra, but it dramatically improves the final result. We have dozens of fitting suits in every size that we try on in our fitting to make sure all of our numbers are correct.</p>
+                
+                <p>The goal isn't just accuracy. It's confidence.</p>
+                
+                <p>Confidence that when the suit comes back, it fits just how you like.</p>
+                
+                <h2>Finding 'Esatto'</h2>
+                <p>As far as styling goes, I've always gravitated toward Italian cuts. It sits in the middle of the relaxed American fit and the slim, rigid British fit. Structured, but not stiff. Refined, but still comfortable.</p>
+                
+                <p>I knew I wanted an Italian word to capture that ethos. Something related to precision or style. But most of the obvious ones were overused or already taken.</p>
+                
+                <p>While collaborating with ChatGPT, the word <em>esatto</em> stood out.</p>
+                
+                <p>If you speak Spanish or Italian, you know it's not just a translation of "exactly." It's an expression. It's affirmative. It's excited.</p>
+                
+                <p>You'd say "<strong>esatto!</strong>".</p>
+                
+                <p>Yes! Exactly! That's it!</p>
+                
+                <p>That's the feeling I want wearing our clothing to evoke.</p>
+                
+                <h2>What Esatto Means</h2>
+                <p>That moment when you put on a suit and it's exactly what you envisioned. The shoulders sit right. The length is perfect. Everything feels balanced.</p>
+                
+                <p>The suit and shirt make you look your absolute best.</p>
+                
+                <p>Nothing needs to be explained or justified. We nailed it.</p>
+                
+                <p>That's the promise of Esatto. Precision. Intentionality. And the feeling that the suit isn't just good—it's exactly right.</p>
+                
+                <p><strong>That's esatto.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Ready to Find Your Esatto?</h2>
+                <p>Schedule a fitting and experience the difference a perfectly fitted suit makes.</p>
+                <a href="contact.html" class="btn">Schedule Your Fitting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Esatto Custom</h4>
+                    <p>Premium custom clothing with a focus on fit, quality, and personal service.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:brandon@esattocustom.com">brandon@esattocustom.com</a></li>
+                        <li><a href="tel:8017544336">(801) 754-4336</a></li>
+                        <li>207 E Gordon Ave<br>Layton, UT 84041</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Esatto Custom Clothing. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
