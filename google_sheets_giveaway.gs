@@ -48,7 +48,7 @@ function handleRequest(e) {
       name: p.name || '',
       phone: p.phone || '',
       referredBy: p.referredBy || '',
-      shoePreference: p.shoePreference || '',
+      shoeColor: p.shoeColor || p.shoePreference || '',
       recaptchaToken: p.recaptchaToken || ''
     };
 
@@ -73,7 +73,7 @@ function handleRequest(e) {
         "Full Name",
         "Mobile Number",
         "Who Referred You?",
-        "Desired Shoe Color/Style"
+        "Shoe Color"
       ];
       sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
     }
@@ -82,7 +82,7 @@ function handleRequest(e) {
       data.name,
       data.phone,
       data.referredBy,
-      data.shoePreference
+      data.shoeColor
     ];
 
     sheet.appendRow(rowData);
@@ -93,7 +93,7 @@ function handleRequest(e) {
                       "Name: " + data.name + "\n" +
                       "Phone: " + data.phone + "\n" +
                       "Referred By: " + data.referredBy + "\n" +
-                      "Shoe Style/Color Preference: " + data.shoePreference;
+                      "Shoe Color: " + data.shoeColor;
 
       MailApp.sendEmail("brandon@fdbespoke.com", "New Giveaway Entry: " + data.name, emailBody);
     } catch (err) {
@@ -245,7 +245,7 @@ function setup() {
     "Full Name",
     "Mobile Number",
     "Who Referred You?",
-    "Desired Shoe Color/Style"
+    "Shoe Color"
   ];
   
   if (sheet.getLastRow() === 0) {
