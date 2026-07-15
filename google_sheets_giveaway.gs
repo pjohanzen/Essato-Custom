@@ -48,6 +48,7 @@ function handleRequest(e) {
       name: p.name || '',
       phone: p.phone || '',
       referredBy: p.referredBy || '',
+      shoePreference: p.shoePreference || '',
       recaptchaToken: p.recaptchaToken || ''
     };
 
@@ -71,7 +72,8 @@ function handleRequest(e) {
       var headers = [
         "Full Name",
         "Mobile Number",
-        "Who Referred You?"
+        "Who Referred You?",
+        "Desired Shoe Color/Style"
       ];
       sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
     }
@@ -79,7 +81,8 @@ function handleRequest(e) {
     var rowData = [
       data.name,
       data.phone,
-      data.referredBy
+      data.referredBy,
+      data.shoePreference
     ];
 
     sheet.appendRow(rowData);
@@ -89,7 +92,8 @@ function handleRequest(e) {
       var emailBody = "New Custom Shoe Giveaway Entry Details:\n\n" +
                       "Name: " + data.name + "\n" +
                       "Phone: " + data.phone + "\n" +
-                      "Referred By: " + data.referredBy;
+                      "Referred By: " + data.referredBy + "\n" +
+                      "Shoe Style/Color Preference: " + data.shoePreference;
 
       MailApp.sendEmail("brandon@fdbespoke.com", "New Giveaway Entry: " + data.name, emailBody);
     } catch (err) {
@@ -240,7 +244,8 @@ function setup() {
   var headers = [
     "Full Name",
     "Mobile Number",
-    "Who Referred You?"
+    "Who Referred You?",
+    "Desired Shoe Color/Style"
   ];
   
   if (sheet.getLastRow() === 0) {

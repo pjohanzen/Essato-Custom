@@ -457,6 +457,12 @@
                             <input type="text" id="referredBy" name="referredBy" placeholder="Friend's Full Name">
                         </div>
 
+                        <div class="form-group">
+                            <label for="shoePreference">If you win, what color/style of shoe do you want? <span
+                                    style="font-size: 0.75rem; color: #888; text-transform: none;">(Optional)</span></label>
+                            <input type="text" id="shoePreference" name="shoePreference" placeholder="e.g. Brown Oxfords, Black Derby">
+                        </div>
+
                         <!-- reCAPTCHA v3 hidden field -->
                         <input type="hidden" id="recaptchaToken" name="recaptchaToken">
 
@@ -759,6 +765,7 @@
                         params.append('name', document.getElementById('name').value);
                         params.append('phone', document.getElementById('phone').value);
                         params.append('referredBy', document.getElementById('referredBy').value);
+                        params.append('shoePreference', document.getElementById('shoePreference').value);
                         params.append('recaptchaToken', token);
 
                         // Submit data asynchronously to Google Apps Script
