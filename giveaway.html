@@ -743,8 +743,9 @@
 
                     const submitBtn = document.getElementById('submitButton');
                     const originalBtnText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Submitting...';
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Submitting, please wait...';
                     submitBtn.disabled = true;
+                    submitBtn.style.opacity = '0.7';
 
                     try {
                         // Execute reCAPTCHA and get token
@@ -810,6 +811,7 @@
                         }
                         submitBtn.innerHTML = originalBtnText;
                         submitBtn.disabled = false;
+                        submitBtn.style.opacity = '1';
                     }
                 });
             }
