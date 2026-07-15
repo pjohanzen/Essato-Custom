@@ -48,7 +48,7 @@ function handleRequest(e) {
       name: p.name || '',
       phone: p.phone || '',
       referredBy: p.referredBy || '',
-      shoeColor: p.shoeColor || p.shoePreference || '',
+      shoeColor: p['Shoe Color'] || p.shoeColor || p.shoePreference || '',
       recaptchaToken: p.recaptchaToken || ''
     };
 
