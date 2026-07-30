@@ -226,9 +226,7 @@
                 <h2 style="font-size: clamp(0.9rem, 1.6vw, 1.15rem); color: #d4af37; letter-spacing: 4px; text-transform: uppercase; margin-bottom: clamp(20px, 3vw, 30px); opacity: 0; animation: fadeInUp 0.8s ease forwards 0.5s; font-family: var(--font-primary); font-weight: 500;">
                     Davis County's Premier Bespoke Experience
                 </h2>
-                <p style="max-width: 620px; margin: 0 auto clamp(25px, 4vw, 35px); font-size: clamp(1rem, 1.6vw, 1.125rem); color: rgba(255,255,255,0.85); line-height: 1.75; opacity: 0; animation: fadeInUp 0.8s ease forwards 0.7s; font-weight: 300;">
-                    Refined bespoke suiting and wedding tailoring crafted to your unique silhouette. 3–4 week lead time.
-                </p>
+
                 
                 <div class="hero-btns" style="opacity: 0; animation: fadeInUp 0.8s ease forwards 0.9s;">
                     <a href="contact.html" class="luxury-btn" style="
@@ -309,8 +307,8 @@
     <section class="section intro-section" style="padding: 100px 0; background-color: #f9f9f9;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-                <h2 class="section-title" style="font-size: 2.8rem; color: #1a2b4a; margin-bottom: 30px; font-weight: 500;">The Esatto Experience</h2>
-                <p class="section-description" style="font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.6; margin-bottom: 50px;">Led by founder and head clothier Brandon Beck, every garment is individually crafted at Esatto Custom to match your style and physique with unparalleled attention to detail. <a href="pricing.html" style="color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;">View our custom suit and shirt pricing</a>, explore <a href="wedding.html" style="color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;">wedding suits & packages</a>, or <a href="about.html#why-essato" style="color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;">discover why clients choose Esatto</a>.</p>
+                <h2 class="section-title" style="font-size: 2.8rem; color: #1a2b4a; margin-bottom: 30px; font-weight: 500;">Experience Esatto</h2>
+                <p class="section-description" style="font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.6; margin-bottom: 50px;">We're obsessed with crafting the perfect fit.</p>
             </div>
             <div class="gallery-grid" style="
                 display: grid;
@@ -1440,12 +1438,45 @@
                         }
                         updateCarousel();
                     }
-                    var autoScrollInterval = setInterval(autoScrollStep, 6000);
+
+                    var autoScrollInterval = null;
+                    var hasStartedAutoScroll = false;
+
+                    function startAutoScroll() {
+                        if (!autoScrollInterval) {
+                            autoScrollInterval = setInterval(autoScrollStep, 6000);
+                        }
+                    }
+
+                    function stopAutoScroll() {
+                        if (autoScrollInterval) {
+                            clearInterval(autoScrollInterval);
+                            autoScrollInterval = null;
+                        }
+                    }
+
+                    // Only start auto-scroll once the reviews section enters the viewport
+                    if ('IntersectionObserver' in window) {
+                        var testimonialsSection = document.querySelector('.testimonials-section') || viewport;
+                        var observer = new IntersectionObserver(function(entries) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    hasStartedAutoScroll = true;
+                                    startAutoScroll();
+                                } else if (hasStartedAutoScroll) {
+                                    stopAutoScroll();
+                                }
+                            });
+                        }, { threshold: 0.15 });
+                        observer.observe(testimonialsSection);
+                    } else {
+                        startAutoScroll();
+                    }
 
                     // Pause auto-scroll on hover, resume on leave
-                    viewport.addEventListener('mouseenter', function() { clearInterval(autoScrollInterval); });
+                    viewport.addEventListener('mouseenter', function() { stopAutoScroll(); });
                     viewport.addEventListener('mouseleave', function() {
-                        autoScrollInterval = setInterval(autoScrollStep, 6000);
+                        if (hasStartedAutoScroll) startAutoScroll();
                     });
 
                     // Touch/swipe support for mobile
@@ -1511,8 +1542,8 @@
             <div class="flagship-grid">
                 <div class="flagship-content">
                     <h2>Our Studio</h2>
-                    <h3 style="color: #d4af37; font-size: 1.8rem; margin: 15px 0;">Serving All of Layton</h3>
-                    <p>Our studio is in Layton, conveniently located for clients across Davis County.</p>
+                    <h3 style="color: #d4af37; font-size: 1.8rem; margin: 15px 0;">Serving Davis and Weber Counties</h3>
+                    <p>Our studio is in Layton, conveniently located for clients north of SLC.</p>
                     <address style="margin: 25px 0;">
                         <p><i class="fas fa-map-marker-alt"></i> 207 E Gordon Ave, Suite 4, Layton, UT 84041</p>
                         <p><i class="fas fa-phone"></i> (801) 754 4336</p>
@@ -1539,65 +1570,56 @@
             <div style="display: grid; gap: 18px;">
                 <details class="faq-item">
                     <summary>
-                        How long does a custom suit take to make?
+                        How long does it take to get a suit made?
                         <span class="faq-icon">&#9662;</span>
                     </summary>
                     <div class="faq-content">
-                        Typical lead time is 3-4 weeks from first fitting to delivery; rush options may be available.
+                        After you place an order, everything will be ready in about 6 weeks.
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary>
-                        What does a bespoke fitting appointment include?
+                        What if I need a rush order?
                         <span class="faq-icon">&#9662;</span>
                     </summary>
                     <div class="faq-content">
-                        We take detailed measurements, review fabrics and style options, and build a fitting suit to refine your profile.
+                        While our standard lead time is 6 weeks, we can rush an order in 2–3 weeks. Rush orders require an additional fee or purchase.
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary>
-                        How much do custom suits cost?
+                        What do we do in a fitting?
                         <span class="faq-icon">&#9662;</span>
                     </summary>
                     <div class="faq-content">
-                        Pricing varies by fabric and customization. See our pricing page for current starting prices and packages.
+                        We'll talk about your vision for what you want to create and your style preferences. Then we'll go through our bespoke fitting process. After we have your measurements, we'll pick out fabrics and details for each piece we're making. The fitting ends with payment for the order. Fittings typically take 45–75 minutes depending on how many items you order.
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary>
-                        Do you make wedding suits?
+                        Do you do alterations for existing garments?
                         <span class="faq-icon">&#9662;</span>
                     </summary>
                     <div class="faq-content">
-                        Yes. We specialize in wedding suits and can coordinate grooms and wedding parties.
+                        No, we only make new custom pieces. If you're looking for an alterations shop, we recommend and use Fanny Green.
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary>
-                        Where are you located and which areas do you serve?
+                        Do you require a deposit?
                         <span class="faq-icon">&#9662;</span>
                     </summary>
                     <div class="faq-content">
-                        We are in Layton, UT and serve Layton, Bountiful, Farmington, Kaysville, Clearfield, Syracuse, and Davis County.
+                        We require full payment up front for your order (we have to pay our factory when we place your order).
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary>
-                        Do you offer fabric samples or swatches?
+                        What colors do you have?
                         <span class="faq-icon">&#9662;</span>
                     </summary>
                     <div class="faq-content">
-                        Yes. We provide fabric swatches during your appointment or by request.
-                    </div>
-                </details>
-                <details class="faq-item">
-                    <summary>
-                        Who is the tailor at Esatto Custom?
-                        <span class="faq-icon">&#9662;</span>
-                    </summary>
-                    <div class="faq-content">
-                        Brandon Beck is the founder and head clothier at Esatto Custom, providing expert bespoke fitting and luxury suiting consultations in Layton, UT.
+                        We have over 1,000 fabric swatches to pick from. Whether you're after a dark red, green, or a shade of brown, we have it.
                     </div>
                 </details>
             </div>
