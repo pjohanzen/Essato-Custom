@@ -1377,6 +1377,15 @@ footer {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .flagship-images-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .flagship-images-grid > div {
+        height: 320px !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .intro-text {
         font-size: 1.1rem;
