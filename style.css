@@ -1490,4 +1490,307 @@ footer {
     .tagline, .subtitle {
         font-size: 0.85rem;
     }
-} 
+}
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Optimization
+   ========================================================================== */
+
+/* 1. Global Viewport & Layout Safeguards */
+html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+img, video, iframe, svg {
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* 2. Container Padding Safeguards */
+@media (max-width: 992px) {
+    .container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+/* 3. Fluid & Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.8rem, 6.5vw, 2.8rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    h2, .section-title {
+        font-size: clamp(1.4rem, 5vw, 2.2rem) !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    h3 {
+        font-size: clamp(1.15rem, 4vw, 1.6rem) !important;
+        line-height: 1.35 !important;
+    }
+
+    p, .section-description {
+        font-size: clamp(0.92rem, 2.8vw, 1.05rem) !important;
+        line-height: 1.65 !important;
+    }
+}
+
+/* 4. Touch Targets & Form Controls */
+.btn, .luxury-btn, button, input[type="submit"] {
+    min-height: 46px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS auto-zoom */
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 5. Mobile Navigation & Hamburger */
+@media (max-width: 768px) {
+    header {
+        height: auto !important;
+        min-height: 70px !important;
+        padding: 10px 0 !important;
+    }
+
+    .nav-container {
+        padding: 0 !important;
+    }
+
+    .hamburger {
+        width: 44px !important;
+        height: 44px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        cursor: pointer !important;
+    }
+
+    .nav-menu {
+        top: 70px !important;
+        height: calc(100vh - 70px) !important;
+        padding: 30px 20px !important;
+        gap: 20px !important;
+    }
+
+    .nav-link {
+        font-size: 1.15rem !important;
+        letter-spacing: 2px !important;
+        padding: 12px 0 !important;
+    }
+}
+
+/* 6. Grid & Multi-Column Section Stacking */
+
+/* About Page Grids */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .how-we-do-wrapper {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .how-we-do-content,
+    .how-we-do-image {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* Pricing Page Grids */
+@media (max-width: 992px) {
+    .pricing-image-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .bundles-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-image-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .pricing-image-grid > div {
+        aspect-ratio: 4/3 !important;
+    }
+}
+
+/* Wedding Page Grids */
+@media (max-width: 992px) {
+    .wedding-intro-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .wedding-includes-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+/* Our Grooms Gallery Grid */
+@media (max-width: 992px) {
+    .wedding-gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .wedding-gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .wedding-gallery-grid > div {
+        aspect-ratio: 3/4 !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .wedding-gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
+
+/* Contact Page Grids & Form */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+}
+
+/* Footer Grid */
+@media (max-width: 768px) {
+    .footer-grid,
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+        text-align: center !important;
+    }
+
+    .footer-col,
+    .footer-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-col .btn,
+    .footer-section .btn {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 1.2rem auto 0 !important;
+    }
+}
+
+/* Hero Section Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 70px !important;
+        min-height: 480px !important;
+    }
+
+    .hero-content {
+        padding: clamp(60px, 10vh, 100px) 0 !important;
+    }
+
+    .hero-btns {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .hero-btns .btn,
+    .hero-btns a {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+}
+
+/* FAQ Accordion Mobile Spacing */
+@media (max-width: 768px) {
+    .faq-item summary {
+        font-size: 1.05rem !important;
+        padding: 16px !important;
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .faq-content {
+        padding: 16px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* 7. Card Padding & Pricing Item Responsiveness */
+@media (max-width: 576px) {
+    [style*="padding: 3rem 2.5rem"],
+    [style*="padding: 2.5rem 2rem"],
+    [style*="padding: 2.5rem"] {
+        padding: 1.5rem 1.2rem !important;
+    }
+
+    .pricing-image-grid,
+    .bundles-grid,
+    .wedding-includes-grid {
+        gap: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Prevent price items from crashing into labels on 320px-375px screens */
+    [style*="justify-content: space-between"][style*="padding-bottom: 20px"] {
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+}
+
+ 
