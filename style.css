@@ -1793,4 +1793,51 @@ input, select, textarea {
     }
 }
 
+/* ==========================================================================
+   Round 5 Mobile Optimization & Typography Enhancements
+   ========================================================================== */
+
+/* 1. Wedding Page Mobile Bundles Stacking */
+@media (max-width: 992px) {
+    .wedding-bundles-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+/* 2. About Page First Section (Our Roots) Mobile Order */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+    .about-grid > .about-content {
+        order: 1 !important;
+    }
+    .about-grid > div:last-child {
+        order: 2 !important;
+    }
+}
+
+/* 3. Pricing & Bundle Mobile Typography & Spacing */
+@media (max-width: 768px) {
+    /* Reduce starting price amount size on mobile */
+    [style*="font-size: 2rem"][style*="color: #d4af37"],
+    [style*="font-size: 2rem"][style*="color: var(--secondary-color)"] {
+        font-size: 1.45rem !important;
+    }
+
+    /* Increase spacing between label and price amount */
+    [style*="justify-content: space-between"][style*="border-bottom"] {
+        gap: 16px !important;
+    }
+
+    /* Reduce bundle card price text size on mobile */
+    [style*="font-size: 1.8rem"][style*="color: #d4af37"] {
+        font-size: 1.4rem !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+
  
