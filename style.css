@@ -1834,10 +1834,107 @@ input, select, textarea {
 
     /* Reduce bundle card price text size on mobile */
     [style*="font-size: 1.8rem"][style*="color: #d4af37"] {
-        font-size: 1.4rem !important;
-        margin-bottom: 20px !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 16px !important;
     }
 }
+
+/* 4. Mobile Header & Hero Top Offset Fixes */
+@media (max-width: 768px) {
+    header {
+        background: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 70px !important;
+        z-index: 1000 !important;
+    }
+
+    .logo-img {
+        content: url('essatologo.png') !important;
+        max-height: 36px !important;
+        width: auto !important;
+    }
+
+    .hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .hamburger .bar {
+        background-color: #1a2b4a !important;
+        height: 2px !important;
+        margin: 3px 0 !important;
+        width: 24px !important;
+    }
+
+    /* Clear hero top offset on mobile so titles are never obscured */
+    .hero {
+        padding-top: 85px !important;
+    }
+
+    .hero-content {
+        padding-top: 35px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+/* 5. Compact Mobile Pricing List & Single-Line Row Alignment */
+@media (max-width: 768px) {
+    .pricing-list-row {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .pricing-title-wrap {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        min-width: 0 !important;
+    }
+
+    .pricing-icon-circle {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.1rem !important;
+        flex-shrink: 0 !important;
+    }
+
+    .pricing-title-text {
+        font-size: 0.95rem !important;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
+    }
+
+    .pricing-amount-text {
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-title-text {
+        font-size: 0.88rem !important;
+    }
+
+    .pricing-amount-text {
+        font-size: 1.15rem !important;
+    }
+}
+
 
 
  
